@@ -19,59 +19,67 @@ This room introduces us to a common web vulnerability called **IDOR (Insecure Di
 ## 🔍 Recon
 After deploying the machine, we visit the IP in the browser:
 
-http://<MACHINE_IP>
+> http://MACHINE_IP
 
-![1](#Neighbour_1.png)
+![Neighbour_1](https://github.com/bd-bunny/Write-ups/blob/main/Neighbour_1.png)
 
 We’re welcomed with a basic login page. Below the form there's a helpful tip:
 
-> *"If you don't have an account, use the guest account (Ctrl+U)"*
+> *"Don't have an account? Use the guest account! <br>
+> (Ctrl+U)"*
 
 So we hit `Ctrl+U` to peek at the HTML source and find this little gem:
 
 ```html
 <!-- use guest:guest credentials until registration is fixed. "admin" user account is off limits!!!!! -->
-Nice. Time to login.
 ```
 
+Nice! Time to login.
+
+<br>
+
+---
 🔑 Logging In
 We log in with the credentials:
 
-Username: guest
-
-Password: guest
+> Username: guest <br>
+> Password: guest
 
 Boom. We're redirected to:
 
-arduino
-Copiar
-Editar
-http://<MACHINE_IP>/profile.php?user=guest
+> http://MACHINE_IP/profile.php?user=guest
+
+![Neighbour_3](https://github.com/bd-bunny/Write-ups/blob/main/Neighbour_1.png)
+
 And hey — the user parameter is sitting right there in the URL. Suspicious.
 
-🧪 Exploitation (IDOR FTW)
+<br>
+
+---
+## 🧪 Exploitation (IDOR FTW)
 Let’s test if we can mess with that user value.
 
 So we swap guest with admin:
 
-pgsql
-Copiar
-Editar
-http://<MACHINE_IP>/profile.php?user=admin
+> http://MACHINE_IP/profile.php?user=admin
+
+![Neighbour_4](https://github.com/bd-bunny/Write-ups/blob/main/Neighbour_1.png)
+
 And it works! We get access to the admin profile without needing admin creds. That’s classic IDOR in action.
 
-🏁 Got the Flag
-On the admin profile page, we find our flag:
+<br>
 
-Copiar
-Editar
-flag{66be95c478473d91a5358f2440c7af1f}
+---
+## 🏁 Got the Flag
+On the admin profile page, we find our flag.
+
 Easy win 💥
 
-🎯 Takeaway
+<br>
+
+---
+## 🎯 Takeaway
 This room is a nice reminder that just hiding stuff isn’t security. Always make sure your app checks permissions server-side. Never trust users to only access what they should.
 
 📚 Resources
-TryHackMe - Neighbour
-
-PortSwigger - IDOR
+[TryHackMe - Neighbour](https://tryhackme.com/room/neighbour)
