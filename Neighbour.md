@@ -9,19 +9,21 @@
 
 ---
 ## 🧠 Intro
-This room introduces us to a common web vulnerability called **IDOR (Insecure Direct Object Reference)**. Basically, it happens when a website lets you access data by changing values in the URL (like usernames or IDs), without checking if you're actually allowed to see it. 😅
+This room introduces us to a common web vulnerability called **IDOR (Insecure Direct Object Reference)**. Basically, it happens when a website lets you access data by changing values in the URL (like usernames or IDs), without checking if you're actually allowed to see it.
 
-*So let's deploy de machine and start Hacking!* 😎
+*So let's deploy the machine and start Hacking!* 😎
 
 <br>
 
 ---
 ## 🔍 Recon
+*Let’s see what we’re dealing with...* 🤔
+
 After deploying the machine, we visit the IP in the browser:
 
 > http://MACHINE_IP
 
-![Neighbour_1](https://github.com/bd-bunny/Write-ups/blob/main/Neighbour_1.png)
+![Neighbour_1](https://github.com/bd-bunny/Write-ups/blob/main/src/Neighbour/Neighbour_1.png)
 
 We’re welcomed with a basic login page. Below the form there's a helpful tip:
 
@@ -39,7 +41,7 @@ Nice! Time to login.
 <br>
 
 ---
-🔑 Logging In
+## 🔑 Logging In
 We log in with the credentials:
 
 > Username: guest <br>
@@ -49,23 +51,27 @@ Boom. We're redirected to:
 
 > http://MACHINE_IP/profile.php?user=guest
 
-![Neighbour_3](https://github.com/bd-bunny/Write-ups/blob/main/Neighbour_1.png)
+![Neighbour_2](https://github.com/bd-bunny/Write-ups/blob/main/src/Neighbour/Neighbour_2.png)
 
 And hey — the user parameter is sitting right there in the URL. Suspicious.
+
+*Classic vulnerability vibes right here.* 😌
 
 <br>
 
 ---
-## 🧪 Exploitation (IDOR FTW)
+## 🧪 Exploitation (IDOR)
 Let’s test if we can mess with that user value.
 
 So we swap guest with admin:
 
 > http://MACHINE_IP/profile.php?user=admin
 
-![Neighbour_4](https://github.com/bd-bunny/Write-ups/blob/main/Neighbour_1.png)
+![Neighbour_3](https://github.com/bd-bunny/Write-ups/blob/main/src/Neighbour/Neighbour_3.png)
 
 And it works! We get access to the admin profile without needing admin creds. That’s classic IDOR in action.
+
+*Never trust the user.* 😉
 
 <br>
 
@@ -73,7 +79,7 @@ And it works! We get access to the admin profile without needing admin creds. Th
 ## 🏁 Got the Flag
 On the admin profile page, we find our flag.
 
-Easy win 💥
+*Boom! Easy win.* 💥
 
 <br>
 
@@ -81,5 +87,8 @@ Easy win 💥
 ## 🎯 Takeaway
 This room is a nice reminder that just hiding stuff isn’t security. Always make sure your app checks permissions server-side. Never trust users to only access what they should.
 
-📚 Resources
+<br>
+
+---
+## 🏠 Room
 [TryHackMe - Neighbour](https://tryhackme.com/room/neighbour)
