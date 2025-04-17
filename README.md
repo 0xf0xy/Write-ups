@@ -37,8 +37,8 @@ Each write-up contains:
 
 | Room            | Difficulty      | Vuln            |
 |-----------------|-----------------|-----------------|
-| [Neighbour](./Neighbour/README.md)    | Easy | IDOR |
-| [Lo-Fi](./Lo-Fi/README.md)            | Easy | LFI  |
+| [Neighbour](./THM/Neighbour/README.md)    | Easy | IDOR |
+| [Lo-Fi](./THM/Lo-Fi/README.md)            | Easy | LFI  |
 
 *...more will come. I'm just getting started.*
 
