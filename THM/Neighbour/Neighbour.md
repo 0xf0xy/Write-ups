@@ -9,9 +9,13 @@
 <br>
 
 ## 🧠 Intro
-This room introduces us to a common web vulnerability called **IDOR (Insecure Direct Object Reference)**. Basically, it happens when a website lets you access data by changing values in the URL (like usernames or IDs), without checking if you're actually allowed to see it.
+Welcome to **Neighbour**, where we’ll be exploring **IDOR (Insecure Direct Object Reference)**. This vulnerability allows users to access someone else’s data just by modifying a simple URL. 
 
-*So let's deploy the machine and start Hacking!* 😎
+*So let's deploy the machine and start Hacking!* 😎  
+
+<br> 
+
+> Want to know more about it? Check out the write-up on my vuln repo: [IDOR]()
 
 <br>
 
