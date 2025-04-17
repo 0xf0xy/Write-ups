@@ -35,10 +35,10 @@ Each write-up contains:
 
 ## ✅ Completed Rooms
 
-| Room            | Difficulty      | Vuln            |
-|-----------------|-----------------|-----------------|
-| [Neighbour](./THM/Neighbour/README.md)    | Easy | IDOR |
-| [Lo-Fi](./THM/Lo-Fi/README.md)            | Easy | LFI  |
+| Room              | Difficulty        | Vuln              |
+|-------------------|-------------------|-------------------|
+| [Neighbour](./THM/Neighbour/Neighbour.md)   | Easy | IDOR |
+| [Lo-Fi](./THM/Lo-Fi/Lo-Fi.md)               | Easy | LFI  |
 
 *...more will come. I'm just getting started.*
 
