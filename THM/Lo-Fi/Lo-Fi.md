@@ -9,9 +9,9 @@
 <br>
 
 ## 🧠 Intro
-Welcome to Lo-Fi! In this room, we’re going to get comfy with LFI (Local File Inclusion), a vulnerability that allows attackers to include files from the local server—whether they’re meant to or not. It’s like sneaking into the server’s playlist and discovering all the secret files it never meant to share.
+Welcome to Lo-Fi! In this room, we’re going to get comfy with LFI (Local File Inclusion), a vulnerability that allows attackers to include files from the local server.
 
-*Let's go for the room*
+*Let's go for the room!*
 
 <br>
 
