@@ -2,12 +2,12 @@
 
 <br>
 
-# <img src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" alt="TryHackMe" width="60" > ROOM_NAME
+# <img src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" width="60" > ROOM_NAME
 
 <br>
 
 <p align="center">
-  <img src="ROOM_ICON_URL" alt="ROOM_NAME" width="200">
+  <img src="ROOM_ICON_URL" width="200">
 </p>
 
 > *ROOM_DESCRIPTION*
