@@ -51,4 +51,4 @@ These write-ups are for **educational purposes only**.
 <br>
 
 ---
-<p align="center"><em>Deploy the machine. Open the port. Find the flag. Vanish.</em></p>
+<p align="center"><em>What are you waiting for? Deploy the machine — let’s own that flag.</em></p>
