@@ -15,10 +15,6 @@ Welcome to Lo-Fi! In this room, we’re going to get comfy with LFI (Local File 
 
 <br>
 
-> Want to know more about it? Check out the write-up on my vuln repo: [LFI]()
-
-<br>
-
 ## 🔍 Recon
 Talk about the first steps: visiting the site, running nmap, checking source code, etc.
 
