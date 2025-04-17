@@ -13,10 +13,6 @@ Welcome to **Neighbour**, where we’ll be exploring **IDOR (Insecure Direct Obj
 
 *So let's deploy the machine and start Hacking!* 😎  
 
-<br> 
-
-> Want to know more about it? Check out the write-up on my vuln repo: [IDOR]()
-
 <br>
 
 ## 🔍 Recon
