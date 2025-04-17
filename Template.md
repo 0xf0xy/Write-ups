@@ -2,7 +2,7 @@
 
 <br>
 
-# <img src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" width="60" > ROOM_NAME
+# <img src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" width="50" > ROOM_NAME
 
 <br>
 
