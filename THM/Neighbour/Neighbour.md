@@ -11,7 +11,7 @@
 ## 🧠 Intro
 Welcome to **Neighbour**, where we’ll be exploring **IDOR (Insecure Direct Object Reference)**. This vulnerability allows users to access someone else’s data just by modifying a simple URL. 
 
-*So let's deploy the machine and start Hacking!* 😎  
+*Deploy your machine and let's knock on our neighbor's door!* 🚪  
 
 <br>
 
