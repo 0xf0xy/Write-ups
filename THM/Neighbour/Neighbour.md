@@ -26,7 +26,7 @@ After deploying the machine, we visit the IP in the browser:
 
 We’re welcomed with a basic login page. Below the form there's a helpful tip:
 
-> *"Don't have an account? Use the guest account! <br>
+> *"Don't have an account? Use the guest account!  
 > (Ctrl+U)"*
 
 So we hit `Ctrl+U` to peek at the HTML source and find this little gem:
@@ -42,7 +42,7 @@ Nice! Time to login.
 ## 🔑 Logging In
 We log in with the credentials:
 
-> Username: guest <br>
+> Username: guest  
 > Password: guest
 
 Boom. We're redirected to:
