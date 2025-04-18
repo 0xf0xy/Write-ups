@@ -23,7 +23,7 @@ No unnecessary chatter — just clean steps.
 Each write-up contains:
 
 - 🖼️ Room banner + description  
-- 🧩 Quick intro to the vuln  
+- 🧩 Quick intro to the vuln + task 
 - 🧭 Step-by-step walkthrough  
 - 🎯 Flags captured  
 - 🧠 Final thoughts or tips
@@ -39,8 +39,8 @@ Each write-up contains:
 |-------------------|-------------------|-------------------|
 | [Neighbour](./THM/Neighbour/Neighbour.md)   | Easy | IDOR |
 | [Lo-Fi](./THM/Lo-Fi/Lo-Fi.md)               | Easy | LFI  |
-| [Light](./THM/Light/Light.md)               | Easy | SQLi |
-| [Billing](./THM/Billing/Billing.md)         | Easy | RCE  |
+<!-- | [Light](./THM/Light/Light.md)               | Easy | SQLi |
+| [Billing](./THM/Billing/Billing.md)         | Easy | RCE  | -->
 
 *...more will come. I'm just getting started.*
 
