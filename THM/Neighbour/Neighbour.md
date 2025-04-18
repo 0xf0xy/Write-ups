@@ -9,15 +9,20 @@
 <br>
 
 ## 🧠 Intro
-Welcome to **Neighbour**, where we’ll be exploring **IDOR (Insecure Direct Object Reference)**. This vulnerability allows users to access someone else’s data just by modifying a simple URL. 
+Welcome to **Neighbour**, where we’ll be exploring **IDOR (Insecure Direct Object Reference)**. This vulnerability occurs when an application trusts client-supplied data—like URL parameters—without properly verifying whether the user has permission to access the requested resource.  
 
 *Deploy your machine and let's knock on our neighbor's door!* 🚪  
 
 <br>
 
-## 🔍 Recon
-*Let’s see what we’re dealing with...* 🤔
+## 🎯 Task
+To pwn this room, we just need to find **1 flag**.  
 
+*So let’s see what we’re dealing with...* 🤔
+
+<br>
+
+## 🔍 Recon
 After deploying the machine, we visit the IP in the browser:
 
 > http://MACHINE_IP
@@ -83,7 +88,7 @@ flag{go_get_it}
 
 <br>
 
-## 🎯 Takeaway
+## 📝 Notes
 This room is a nice reminder that just hiding stuff isn’t security. Always make sure your app checks permissions server-side. Never trust users to only access what they should.
 
 <br>
