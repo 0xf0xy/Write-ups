@@ -9,30 +9,68 @@
 <br>
 
 ## 🧠 Intro
-Welcome to **Lo-Fi**! In this room, we’re going to get comfy with **LFI (Local File Inclusion)**, a vulnerability that allows attackers to include files from the local server.
+Welcome to **Lo-Fi**, where we’ll be exploring **LFI (Local File Inclusion)**. This vulnerability happens when an application allows users to include files on the server through the browser — usually due to unsafe handling of URL parameters.
+
 
 *Get into the Lo-Fi vibe and deploy your machine!* 🎧
 
 <br>
 
 ## 🔍 Recon
-Talk about the first steps: visiting the site, running nmap, checking source code, etc.
+We start off by visiting the machine’s IP in the browser:
 
-Note any interesting findings here.
+> http://MACHINE_IP
+
+![LoFi_1](src/LoFi_1.png)
+
+We’re greeted with a chill video page and some categories on the side. Out of curiosity, we click on one—`sleep`.
+
+That takes us to:
+
+> http://MACHINE_IP/?page=sleep.php
+
+![LoFi_2](src/LoFi_2.png)
+
+Hmm. That URL looks interesting. `page=sleep.php`? Looks like the server is including files based on that parameter. 🤔
+
+So... what if we try something like:
+
+> http://MACHINE_IP/?page=/home
+
+![LoFi_3](src/LoFi_3.png)
+
+Bingo. We get a message telling us to stop hacking.
+
+*Sorry, no can do.* 😎
 
 <br>
 
-## 🔑 Access
-Explain how you got initial access — logging in, finding creds, exploiting something, etc.
+## 🧪 Exploitation (LFI)
+Time to test a classic **Local File Inclusion** payload:
+
+> `../../../../etc/passwd`
+
+So we go to:
+
+> http://MACHINE_IP/?page=../../../../etc/passwd
+
+![LoFi_4](src/LoFi_4.png)
+
+Boom! We get the contents of `/etc/passwd` on the page. That's a confirmed LFI vulnerability.
+
+Let’s look for our flag. Common sense says it might be in the root directory:
+
+> http://MACHINE_IP/?page=../../../../flag.txt
+
+![LoFi_5](src/LoFi_5.png)
+
+And there it is!
 
 <br>
 
-## 🧪 Exploitation
-Detail the actual vulnerability. This could be an IDOR, SQLi, RCE, whatever. Include the thought process and what worked (and maybe what didn’t).
+## 🏁 Got the Flag
 
-<br>
 
-## 🏁 Flag
 Once you found the flag, drop it here (or redact it if you're sharing publicly):
 
 ```
