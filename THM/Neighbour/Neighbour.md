@@ -56,7 +56,7 @@ Boom. We're redirected to:
 
 ![Neighbour_2](src/Neighbour_2.png)
 
-And hey — the user parameter is sitting right there in the URL. Suspicious.
+And hey—the user parameter is sitting right there in the URL. Suspicious.
 
 *Classic vulnerability vibes right here.* 😌
 
