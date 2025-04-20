@@ -15,7 +15,7 @@
 ## 🧠 About
 This is a personal archive of TryHackMe room walkthroughs.  
 Each write-up is crafted with a focus on the **mindset**, not just the tools.  
-No unnecessary chatter — just clean steps.
+No unnecessary chatter—just clean steps.
 
 <br>
 
@@ -29,7 +29,7 @@ Each write-up contains:
 - 🧠 Final thoughts or tips
 
 > All content is written with a chill tone.  
-> Because CTF should be fun — not a compliance report.
+> Because CTF should be fun—not a compliance report.
 
 <br>
 
@@ -54,4 +54,4 @@ These write-ups are for **educational purposes only**.
 <br>
 
 ---
-<p align="center"><em>What are you waiting for? Deploy the machine — let’s own that flag.</em></p>
+<p align="center"><em>What are you waiting for? Deploy the machine—let’s pwn that flag.</em></p>
