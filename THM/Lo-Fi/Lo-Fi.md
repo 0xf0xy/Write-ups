@@ -9,7 +9,7 @@
 <br>
 
 ## 🧠 Intro
-Welcome to **Lo-Fi**, where we’ll be exploring **LFI (Local File Inclusion)**. This vulnerability happens when an application allows users to include files on the server through the browser — usually due to unsafe handling of URL parameters.  
+Welcome to **Lo-Fi**, where we’ll be exploring **LFI (Local File Inclusion)**. This vulnerability happens when an application allows users to include files on the server through the browser—usually due to unsafe handling of URL parameters.  
 
 *Get into the Lo-Fi vibe and deploy your machine!* 🎧
 
@@ -29,7 +29,7 @@ We start off by visiting the machine’s IP in the browser:
 
 ![Lo-Fi_1](src/Lo-Fi_1.png)
 
-We’re greeted with a chill video page and some categories on the side. Out of curiosity, we click on one — `sleep`.
+We’re greeted with a chill video page and some categories on the side. Out of curiosity, we click on one—`sleep`.
 
 That takes us to:
 
