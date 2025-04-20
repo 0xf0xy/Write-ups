@@ -2,7 +2,7 @@
 
 <br>
 
-# <img src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" width="50" > ROOM_NAME
+# ROOM_NAME
 
 <br>
 
@@ -16,6 +16,11 @@
 
 ## 🧠 Intro
 Quick summary of the vulnerability or technique the room is focused on. Add some context if needed.
+
+<br>
+
+## 🎯 Task
+Summary of the room objective (flags, usernames, infos, ect).
 
 <br>
 
@@ -45,7 +50,7 @@ flag{go_get_it}
 
 <br>
 
-## 🎯 Takeaway
+## 📝 Notes
 Wrap up with what you learned. Anything that surprised you or that you'll remember next time?
 
 <br>
