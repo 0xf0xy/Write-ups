@@ -29,7 +29,7 @@ Each write-up contains:
 - 🧠 Final thoughts or tips
 
 > All content is written with a chill tone.  
-> Because hacking should be fun — not a compliance report.
+> Because CTF should be fun — not a compliance report.
 
 <br>
 
@@ -39,8 +39,9 @@ Each write-up contains:
 |-------------------|-------------------|-------------------|
 | [Neighbour](./THM/Neighbour/Neighbour.md)   | Easy | IDOR |
 | [Lo-Fi](./THM/Lo-Fi/Lo-Fi.md)               | Easy | LFI  |
-<!-- | [Light](./THM/Light/Light.md)               | Easy | SQLi |
-| [Billing](./THM/Billing/Billing.md)         | Easy | RCE  | -->
+| [Light](./THM/Light/Light.md)               | Easy | SQLi |
+<!-- | [Billing](./THM/Billing/Billing.md)         | Easy | RCE  | 
+[ [Whiterose](./THM/Whiterose/Whiterose.md)   | Easy | IDK  | -->
 
 *...more will come. I'm just getting started.*
 
