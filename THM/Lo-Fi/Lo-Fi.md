@@ -9,15 +9,17 @@
 <br>
 
 ## 🧠 Intro
-Welcome to **Lo-Fi**, where we’ll be exploring **LFI (Local File Inclusion)**. This vulnerability happens when an application allows users to include files on the server through the browser—usually due to unsafe handling of URL parameters.  
+Welcome to **Lo-Fi**, where we’ll be exploring **Local File Inclusion (LFI)**. This vulnerability happens when an application allows users to include files on the server through the browser—usually due to unsafe handling of URL parameters.  
 
 *Get into the Lo-Fi vibe and deploy your machine!* 🎧
 
 <br>
 
 ## 🎯 Task
-To pwn this room, we just need to find **1 flag**.
+To pwn this room, we need to:
 
+- Capture the **flag**.  
+  
 *Let’s see what we can uncover.* 🔍
 
 <br> 
