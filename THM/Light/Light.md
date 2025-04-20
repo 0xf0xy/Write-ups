@@ -137,7 +137,7 @@ Mission complete. 🎯
 <br>
 
 ## 🏁 Got the Flag
-The flag is on the password collum in the admintable table
+On the admintable table, we find the username, the password and the flag.
 
 ```
 flag{go_get_it}
