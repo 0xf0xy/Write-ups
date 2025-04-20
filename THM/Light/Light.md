@@ -13,7 +13,7 @@
 ## 🧠 Intro
 Welcome to **Light**, a short and clever room focused on **SQL Injection (SQLi)** and database misconfigurations. We’ll dig into some manual SQLi and bypass filters to uncover secrets hidden in plaintext. 
 
-*Deploy the machine and let’s shine some light on this challenge.* 💡
+*Deploy the machine and let's light this one up.* 🔦
 
 <br>
 
@@ -143,11 +143,11 @@ On the admintable table, we find the username, the password and the flag.
 flag{go_get_it}
 ```
 
-*Straight from the shadows into the light.* 🕶️💡
+*Straight from the shadows into the light.* 💡
 
 <br>
 
-## 🎯 Notes
+## 📝 Notes
 This room shows how powerful SQL injection can be even in very restricted environments. Filter bypassing, capitalization tricks, and knowledge of DBMS behavior are all key tools when digging into databases.
 
 *Keep it light—but thorough.* 😉
