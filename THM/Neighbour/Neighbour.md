@@ -16,7 +16,9 @@ Welcome to **Neighbour**, where we’ll be exploring **IDOR (Insecure Direct Obj
 <br>
 
 ## 🎯 Task
-To pwn this room, we just need to find **1 flag**.  
+To pwn this room, we need to:
+
+- Capture the **flag**.
 
 *So let’s see what we’re dealing with...* 🤔
 
@@ -47,8 +49,8 @@ Nice! Time to login.
 ## 🔑 Logging In
 We log in with the credentials:
 
-> Username: guest  
-> Password: guest
+> Username: `guest`  
+> Password: `guest`
 
 Boom. We're redirected to:
 
