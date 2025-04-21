@@ -9,7 +9,7 @@
 <br>
 
 ## 🧠 Intro
-Welcome to **Neighbour**, where we’ll be exploring **IDOR (Insecure Direct Object Reference)**. This vulnerability occurs when an application trusts client-supplied data—like URL parameters—without properly verifying whether the user has permission to access the requested resource.  
+Welcome to **Neighbour**, where we’ll be exploring **IDOR (Insecure Direct Object Reference)**. This vulnerability occurs when an application trusts client-supplied data — like URL parameters — without properly verifying whether the user has permission to access the requested resource.  
 
 *Deploy your machine and let's knock on our neighbor's door!* 🚪  
 
@@ -58,7 +58,7 @@ Boom. We're redirected to:
 
 ![Neighbour_2](src/Neighbour_2.png)
 
-And hey—the user parameter is sitting right there in the URL. Suspicious.
+And hey — the user parameter is sitting right there in the URL. Suspicious.
 
 *Classic vulnerability vibes right here.* 😌
 
