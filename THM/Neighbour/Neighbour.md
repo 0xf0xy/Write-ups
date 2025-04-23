@@ -33,8 +33,8 @@ After deploying the machine, we visit the IP in the browser:
 
 We’re welcomed with a basic login page. Below the form there's a helpful tip:
 
-> *"Don't have an account? Use the guest account!  
-> (Ctrl+U)"*
+> *Don't have an account? Use the guest account!  
+> (Ctrl+U)*
 
 So we hit `Ctrl+U` to peek at the HTML source and find this little gem:
 
