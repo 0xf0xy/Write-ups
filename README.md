@@ -25,7 +25,7 @@ Each write-up contains:
 - 🧩 Quick intro to the vuln + task 
 - 🧭 Step-by-step walkthrough  
 - 🎯 Flags captured  
-- 🧠 Final thoughts or tips
+- 🧠 Final thoughts
 
 > All content is written with a chill tone.  
 > Because CTF should be fun — not a compliance report.
