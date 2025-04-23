@@ -12,13 +12,13 @@
 
 <br>
 
-## 🧠 About
+## > About
 This is a personal archive of TryHackMe room walkthroughs.  
 Each write-up is crafted with a focus on the **mindset**, not just the tools.
 
 <br>
 
-## 📁 Format
+## > Format
 Each write-up contains:
 
 - 🖼️ Room banner + description  
@@ -32,7 +32,7 @@ Each write-up contains:
 
 <br>
 
-## ✅ Completed Rooms
+## > Completed Rooms
 
 | Room              | Difficulty        | Vuln              |
 |-------------------|-------------------|-------------------|
@@ -46,7 +46,7 @@ Each write-up contains:
 
 <br>
 
-## ⚠️ Disclaimer
+## > Disclaimer
 These write-ups are for **educational purposes only**.
 > *Knowledge is power. Use it wisely.*
 
