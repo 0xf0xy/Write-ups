@@ -77,7 +77,7 @@ And there it is!
 <br>
 
 ## 🏁 Got the Flag
-On the root directory, we find our flag.
+On the root directory, we find the flag.
 
 ```
 flag{go_get_it}
