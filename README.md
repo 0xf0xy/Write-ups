@@ -16,9 +16,6 @@
 This is a personal archive of TryHackMe room walkthroughs.  
 Each write-up is crafted with a focus on the **mindset**, not just the tools.
 
-<br>
-
-## > Format
 Each write-up contains:
 
 - 🖼️ Room banner + description  
