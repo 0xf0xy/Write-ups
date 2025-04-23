@@ -11,7 +11,8 @@
 <br>
 
 ## 🧠 Intro
-Welcome to **Light**, a short and clever room focused on **SQL Injection (SQLi)** and database misconfigurations. We’ll dig into some manual SQLi and bypass filters to uncover secrets hidden in plaintext. 
+Welcome to **Light**, a short and clever room focused on **SQL Injection (SQLi)** and database misconfigurations. SQLi happens when an application directly includes unsanitized user input in SQL queries — allowing attackers to manipulate the query logic and extract sensitive data from the backend.  
+
 
 *Deploy the machine and let's light this one up.* 🔦
 
@@ -32,13 +33,13 @@ The room description hints at connecting to the machine via netcat on port `1337
 nc MACHINE_IP 1337
 ```
 
-![Light_x](src/Light_x)
+![Light_1](src/Light_1)
 
 We're greeted by a minimal login interface. We try logging in with:
 
 > Username: `smokey`
 
-The server responds with the corresponding password—but doesn’t actually log us in. Strange. Seems like we’re just querying the database and getting a response.
+The server responds with the corresponding password — but doesn’t actually log us in. Strange. Seems like we’re just querying the database and getting a response.
 
 Time to test for SQL injection. 😈
 
@@ -54,7 +55,7 @@ We start simple with the classic:
 
 But the server blocks us:
 
-> *"For strange reasons I can't explain, any input containing /*, -- or, %0b is not allowed :)"*
+> *For strange reasons I can't explain, any input containing /*, -- or, %0b is not allowed :)*
 
 Okay, so comments and certain keywords are filtered. Let’s try without the comment:
 
@@ -64,7 +65,7 @@ Okay, so comments and certain keywords are filtered. Let’s try without the com
 
 And now we get:
 
-> *"Error: unrecognized token: "''' LIMIT 30""*
+> *Error: unrecognized token: "''' LIMIT 30"*
 
 Looks like an issue with unmatched quotes. So we try:
 
@@ -72,9 +73,9 @@ Looks like an issue with unmatched quotes. So we try:
 ' OR '1=1
 ```
 
-Success! We get this as response:
+Success! We get a password as a response — even though it's useless:
 
-> *Password:
+> *tF8tj2o94WE4LKC*
 
 This confirm that SQLi works. Now let’s go deeper. We need to find out what DBMS we're dealing with.
 
@@ -86,7 +87,7 @@ We suspect it's **SQLite** (given the name *Light*), so we try this payload:
 
 ...but the server complains:
 
-> *"Ahh there is a word in there I don't like :("*  
+> *Ahh there is a word in there I don't like :(*  
 
 Looks like keywords are filtered in uppercase. What if we capitalize?
 
@@ -94,9 +95,9 @@ Looks like keywords are filtered in uppercase. What if we capitalize?
 ' Union Select sqlite_version() '
 ```
 
-Boom. This works—we get:
+Boom. This works — we get:
 
-> *Password: 3.31.1*
+> *3.31.1*
 
 So we’re dealing with SQLite 3. Nice.
 
@@ -108,7 +109,7 @@ Now, let’s enumerate the schema via the `sqlite_master` table:
 
 This returns the table schema:
 
-> `CREATE TABLE admintable (username TEXT, password TEXT)`
+![Light_2](src/Light_2.png)
 
 Perfect. Now let’s extract the data.
 
@@ -120,7 +121,7 @@ To list usernames:
 
 Result:
 
-![Light_x](src/Light_x.png)
+![Light_3](src/Light_3.png)
 
 Then for passwords:
 
@@ -130,9 +131,9 @@ Then for passwords:
 
 And we get:
 
-![Light_x](src/Light_x.png)
+![Light_4](src/Light_4.png)
 
-Mission complete. 🎯
+Mission complete!
 
 <br>
 
@@ -149,8 +150,6 @@ flag{go_get_it}
 
 ## 📝 Notes
 This room shows how powerful SQL injection can be even in very restricted environments. Filter bypassing, capitalization tricks, and knowledge of DBMS behavior are all key tools when digging into databases.
-
-*Keep it light—but thorough.* 😉
 
 <br>
 
