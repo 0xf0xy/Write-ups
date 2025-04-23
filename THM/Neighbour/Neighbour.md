@@ -80,7 +80,7 @@ And it works! We get access to the admin profile without needing admin creds. Th
 <br>
 
 ## 🏁 Got the Flag
-On the admin profile page, we find our flag.
+On the admin profile page, we find the flag.
 
 ```
 flag{go_get_it}
