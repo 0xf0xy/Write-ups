@@ -6,8 +6,8 @@
 <p align="center"><em>Flags? Captured. Vulns? Exploited. Lessons? Learned.</em></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/CTF-Walkthroughs-black?style=flat&logo=tryhackme" />
-  <img src="https://img.shields.io/badge/Markdown-Docs-blue?style=flat&logo=markdown" />
+  <img src="https://img.shields.io/badge/CTF-Walkthroughs-black?style=for-the-badge&logo=tryhackme" />
+  <img src="https://img.shields.io/badge/Markdown-Docs-blue?style=for-the-badge&logo=markdown" />
 </p>
 
 <br>
