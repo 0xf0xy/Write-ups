@@ -53,7 +53,7 @@ We start simple with the classic:
 
 But the server blocks us:
 
-> *For strange reasons I can't explain, any input containing /**, -- or, %0b is not allowed :)*
+> *For strange reasons I can't explain, any input containing /\*, -- or, %0b is not allowed :)*
 
 Okay, so comments and certain keywords are filtered. Let’s try without the comment:
 
