@@ -13,6 +13,7 @@
 <br>
 
 ## 🧠 About
+
 This is a personal archive of TryHackMe room walkthroughs.  
 Each write-up is crafted with a focus on the **mindset**, not just the tools.
 
@@ -23,9 +24,6 @@ Each write-up contains:
 - 🧭 Step-by-step walkthrough  
 - 🎯 Flags captured  
 - 🧠 Final thoughts
-
-> All content is written with a chill tone.  
-> Because CTF should be fun — not a compliance report.
 
 <br>
 
@@ -44,6 +42,7 @@ Each write-up contains:
 <br>
 
 ## ⚠️ Disclaimer
+
 These write-ups are for **educational purposes only**.
 > *Knowledge is power. Use it wisely.*
 
