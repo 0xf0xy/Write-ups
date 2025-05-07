@@ -10,7 +10,6 @@
 ## 🧠 About
 
 This is a personal archive of TryHackMe room walkthroughs.  
-Each write-up is crafted with a focus on the **mindset**, not just the tools.
 
 Each write-up contains:
 
@@ -33,13 +32,6 @@ Each write-up contains:
 [ [Whiterose](./THM/Whiterose/Whiterose.md)   | Easy | IDK  | -->
 
 *...more will come. I'm just getting started.*
-
-<br>
-
-## ⚠️ Disclaimer
-
-These write-ups are for **educational purposes only**.
-> *Knowledge is power. Use it wisely.*
 
 <br>
 
