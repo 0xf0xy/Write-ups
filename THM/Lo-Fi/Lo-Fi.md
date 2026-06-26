@@ -8,91 +8,104 @@
 
 <br>
 
-## 🧠 Intro
-Welcome to **Lo-Fi**, where we’ll be exploring **Local File Inclusion (LFI)**. This vulnerability happens when an application allows users to include files on the server through the browser — usually due to unsafe handling of URL parameters.  
+## ./overview
 
-*Get into the Lo-Fi vibe and deploy your machine!* 🎧
+**Lo-Fi** is a TryHackMe room focused on **Local File Inclusion (LFI)**. The challenge demonstrates how insecure handling of user-controlled file paths allows an attacker to access arbitrary files stored on the target system.
+
+This document describes the reconnaissance, exploitation process, and security implications of the vulnerability.
 
 <br>
 
-## 🎯 Task
-To pwn this room, we need to:
+## ./objective
 
-- Capture the **flag**.  
-  
-*Let’s see what we can uncover.* 🔍
+* Identify the Local File Inclusion vulnerability.
+* Read arbitrary files from the target system.
+* Capture the room flag.
 
-<br> 
+<br>
 
-## 🔍 Recon
-We start off by visiting the machine’s IP in the browser:
+## ./reconnaissance
+
+After deploying the machine, navigate to the target application:
 
 > http://MACHINE_IP
 
-![Lo-Fi_1](src/Lo-Fi_1.png)
+![Lo-Fi\_1](src/Lo-Fi_1.png)
 
-We’re greeted with a chill video page and some categories on the side. Out of curiosity, we click on one — `sleep`.
+The application displays a webpage containing several music categories.
 
-That takes us to:
+Selecting the **sleep** category redirects the browser to:
 
 > http://MACHINE_IP/?page=sleep.php
 
-![Lo-Fi_2](src/Lo-Fi_2.png)
+![Lo-Fi\_2](src/Lo-Fi_2.png)
 
-Hmm. That URL looks interesting. `page=sleep.php`? Looks like the server is including files based on that parameter. 🤔
+The presence of the `page` parameter suggests that the application dynamically includes files based on user input, making it a potential candidate for Local File Inclusion testing.
 
-So... what if we try something like:
+To verify this behavior, a simple path is supplied as the parameter value:
 
 > http://MACHINE_IP/?page=/home
 
-![Lo-Fi_3](src/Lo-Fi_3.png)
+![Lo-Fi\_3](src/Lo-Fi_3.png)
 
-Bingo. We get a message telling us to stop hacking.
-
-*Sorry, that’s not gonna happen.* 😎
+Although the request does not disclose sensitive information, the application's response confirms that user-controlled file paths are being processed.
 
 <br>
 
-## 🧪 Exploitation (LFI)
-Time to test a classic LFI payload:
+## ./vulnerability_analysis
 
-> `../../../../etc/passwd`
+A standard directory traversal payload is used to determine whether arbitrary files can be accessed:
 
-So we go to:
+```text
+../../../../etc/passwd
+```
+
+The resulting request becomes:
 
 > http://MACHINE_IP/?page=../../../../etc/passwd
 
-![Lo-Fi_4](src/Lo-Fi_4.png)
+![Lo-Fi\_4](src/Lo-Fi_4.png)
 
-Boom! We get the contents of `/etc/passwd` on the page. That's a confirmed LFI vulnerability.
+The application successfully returns the contents of `/etc/passwd`, confirming the presence of a **Local File Inclusion (LFI)** vulnerability.
 
-Let’s look for our flag. Common sense says it might be in the root directory:
+Since arbitrary files can be read, the next step is to locate the room flag.
+
+<br>
+
+## ./data_extraction
+
+A common location for challenge flags is the root directory.
+
+Requesting:
 
 > http://MACHINE_IP/?page=../../../../flag.txt
 
-![Lo-Fi_5](src/Lo-Fi_5.png)
+returns the expected file.
 
-And there it is!
+![Lo-Fi\_5](src/Lo-Fi_5.png)
+
+The response contains the room flag.
 
 <br>
 
-## 🏁 Got the Flag
-On the root directory, we find the flag.
+## ./flag
 
+```text
+flag{********}
 ```
-flag{go_get_it}
-```
-
-*Easy, breezy, breech-y.* 😌  
- 
-<br>
-
-## 📝 Notes
-This room shows how a seemingly harmless parameter can be a serious entry point. If you allow file paths to be loaded from user input, make sure to sanitize and restrict that input.
 
 <br>
 
-## 🏠 Room Info
-- 🧩 [TryHackMe - Lo-Fi](https://tryhackme.com/room/lofi)
-- 🏷️ Difficulty: Easy
-- 🧠 Focus: LFI (Local File Inclusion)
+## ./conclusion
+
+This room demonstrates how insufficient validation of file path parameters can expose sensitive files on the underlying operating system.
+
+Local File Inclusion vulnerabilities allow attackers to read arbitrary files and, depending on the application configuration, may lead to further exploitation such as information disclosure or even remote code execution.
+
+Restricting file access to predefined resources, validating user input, and avoiding direct inclusion of client-supplied paths are fundamental practices for preventing LFI vulnerabilities.
+
+---
+
+<p align="center">
+  <sub>© 2026 0xf0xy • For educational purposes only.</sub>
+</p>
